@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+  background: #CCC
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book {
+  width: 400px;
+  height: 600px;
+  padding: 30px;
+  border-left: 30px solid #FF2929;
+  transform: rotate(-20deg) skewX(10deg) scale(.8);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: transform 0.5s;
+  background-color:#d50000;
+  background-image: repeating-linear-gradient(45deg,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8) 100px,
+    transparent 0px,
+    transparent 200px),
+  repeating-linear-gradient(-45deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5) 100px,
+    transparent 0px,
+    transparent 200px);
+}
+
+.plate {
+  background: #b06c25;
+  border: 1px dashed #fff;
+  padding: 1rem 3rem;
+  outline:5px solid #b06c25;
+  color:#fff;
+  text-shadow:1px 1px #83511d;
+}
+
+.book:hover {
+  transform: rotate(0deg) skewX(0deg) scale(1);
+}
+
+.book h1 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  color: #000000
+}
+
+
+.book h2 {
+  margin: 0 0 20px 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  color: #000000
+}
+
+
+.book p {
+  margin: 0;
+  padding: 0;
+  text-align: justify
+}
+
+.book:before {
+  content: "";
+  width: 30px;
+  height: 100%;
+  background: #8a0e0e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewY(-45deg) translate(-57px, -43px)
+}
+
+.book:after {
+  content: "";
+  width: 106%;
+  height: 30px;
+  background: #CCC;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: skewX(-45deg) translate(-11px, 30px)
+}
