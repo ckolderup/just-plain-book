@@ -17,8 +17,6 @@ function getBook(seed) {
 }
 
 function App() {
-  const params = window.location.search;
-  const seed = new URLSearchParams(params).get("s");
   const [book, setBook] = useState(getBook(seed));
 
   function refresh() {
