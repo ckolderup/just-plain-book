@@ -21,28 +21,28 @@ body {
   box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  transition: transform 0.5s;
-  background-color:#d50000;
-  background-image: repeating-linear-gradient(45deg,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8) 100px,
-    transparent 0px,
-    transparent 200px),
-  repeating-linear-gradient(-45deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5) 100px,
-    transparent 0px,
-    transparent 200px);
+  justify-content: flex-end;
+  transition: transform 0.75s;
+  background-image: url('cover.jpg');
+  background-size: cover;
 }
 
 .plate {
-  background: #b06c25;
-  border: 1px dashed #fff;
+  font-family: 'Arbutus Slab', serif;
+  background: #e47162aa;
   padding: 1rem 3rem;
-  outline:5px solid #b06c25;
   color:#fff;
-  text-shadow:1px 1px #83511d;
+  text-shadow: 1px 1px #616161;
+}
+
+.plate .cursive {
+  font-family: 'Great Vibes', cursive;
+  padding: 3px;
+}
+
+.plate .small {
+  font-size: 28px;
+  padding: 4px;
 }
 
 .book:hover {
@@ -54,7 +54,7 @@ body {
   padding: 0;
   width: 100%;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   color: #000000
 }
 
@@ -95,4 +95,71 @@ body {
   bottom: 0;
   left: 0;
   transform: skewX(-45deg) translate(-11px, 30px)
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2;
+  margin-top: 80px;
+}
+
+button {
+  appearance: button;
+  background-color: #d50000;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 10px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+button:after {
+  background-clip: padding-box;
+  background-color: #FF2929;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+button:main,
+button:focus {
+  user-select: auto;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+button:disabled {
+  cursor: auto;
 }
