@@ -17,14 +17,24 @@ function getBook(seed) {
 }
 
 function App() {
-  const [book, setBook] = useState(getBook(seed));
+  const [book, setBook] = useState(getBook());
 
   function refresh() {
-    setBook(getBook(seed));
+    setBook(getBook());
+  }
+
+  function redirect() {
+    window.location.href = "https://justplainwrong.buzzsprout.com/";
   }
 
   function share() {
-    alert(`${book.seed}`);
+    var inputc = document.body.appendChild(document.createElement("input"));
+    inputc.value = window.location.href;
+    inputc.focus();
+    inputc.select();
+    document.execCommand("copy");
+    inputc.parentNode.removeChild(inputc);
+    alert('copied to clipboard!');
   }
 
   function styleCap(text) {
@@ -61,6 +71,7 @@ function App() {
       </div>
       <div className='buttons'>
         <button onClick={refresh}>Refresh</button>
+        <button onClick={redirect}>Podcast</button>
       </div>
     </div>
   );
