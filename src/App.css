@@ -23,7 +23,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   transition: transform 0.75s;
-  background-image: url('cover.jpg');
+  background-image: url('/cover.jpg');
   background-size: cover;
 }
 
